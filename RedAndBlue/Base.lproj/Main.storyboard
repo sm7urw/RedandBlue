@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--RedAndBlue-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="RedAndBlue" id="BYZ-38-t0r" customClass="ViewController" customModule="RedAndBlue" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BoomAppBg" translatesAutoresizingMaskIntoConstraints="NO" id="w9O-0t-duz">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cNn-Oa-J2C">
+                                <rect key="frame" x="46" y="410" width="109" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Hide red">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.10015009929157515" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="hideRedLogo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3wp-UA-xbh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sGb-2b-EGb">
+                                <rect key="frame" x="223" y="410" width="105" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Hide blue"/>
+                                <connections>
+                                    <action selector="hideBlueLogo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Lq-9d-ko1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lzo-T0-AnT" userLabel="Show blue">
+                                <rect key="frame" x="223" y="445" width="105" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Show blue"/>
+                                <connections>
+                                    <action selector="hideBlueLogo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tdl-9Q-NSU"/>
+                                    <action selector="showBlueLogo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4q1-xG-1oI"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="RedandBlue_Red" translatesAutoresizingMaskIntoConstraints="NO" id="6p5-V7-1yM">
+                                <rect key="frame" x="20" y="106" width="160" height="160"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="RedandBlue_Blue" translatesAutoresizingMaskIntoConstraints="NO" id="YWc-iL-DKh">
+                                <rect key="frame" x="195" y="106" width="160" height="160"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bb-bj-Ml2" userLabel="Show red">
+                                <rect key="frame" x="46" y="445" width="109" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Show red">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.1001500993" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="hideRedLogo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sBe-v6-6fB"/>
+                                    <action selector="showRedLogo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pr4-e6-UoT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="backgroundImage" destination="w9O-0t-duz" id="5aH-Qy-RZt"/>
+                        <outlet property="blueLogo" destination="YWc-iL-DKh" id="CZd-uH-tZ7"/>
+                        <outlet property="redLogo" destination="6p5-V7-1yM" id="5pm-QK-jih"/>
+                        <outlet property="showRedLogoButton" destination="Lzo-T0-AnT" id="rym-4d-CGF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="244.5" y="337.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BoomAppBg" width="1400" height="980"/>
+        <image name="RedandBlue_Blue" width="561" height="561"/>
+        <image name="RedandBlue_Red" width="561" height="561"/>
+    </resources>
+</document>
